@@ -14,3 +14,14 @@ Microsoft Learn. Building on the Client/Server Architecture. Tersedia di: https:
 Apple Developer Documentation. Distribution. Tersedia di: https://developer.apple.com/documentation/technologyoverviews/distribution 
 
 ScienceDirect. Platforms and their advantages and disadvantages. Tersedia di: https://www.cell.com/action/showFullTableHTML?isHtml=true&tableId=tbl2&pii=S2405-8440%2824%2909010-8 
+
+
+
+
+Refleksi
+
+Dari ketiga platform yang dibahas, saya merasa platform Mobile (Aplikasi HP) adalah yang paling menarik untuk dipelajari. Alasannya karena aplikasi HP sangat dekat dengan kehidupan sehari-hari. Hampir semua orang memegang HP setiap saat. Saya tertarik mempelajari bagaimana sebuah aplikasi bisa mengakses fitur-fitur canggih di HP, seperti kamera, lokasi (GPS), dan mikrofon, untuk membuat hidup kita lebih mudah. Selain itu, melihat aplikasi di layar HP yang kecil namun bisa melakukan banyak hal rumit terasa sangat menakjubkan bagi saya.
+
+Tantangan terbesar saat melakukan setup environment (persiapan alat) tadi justru bukan soal pemasangan aplikasinya, melainkan masalah koneksi dan izin akses. Waktu pertama kali mencoba mengirim tugas (push) ke GitHub lewat aplikasi VS Code, saya sempat bingung dan sedikit panik karena muncul pesan error berwarna merah di layar. Ternyata, sistemnya meminta saya untuk melakukan login dan memberi izin akses ke akun GitHub. Saya sempat kebingungan mencari tombol persetujuannya di browser karena prosesnya terasa agak rumit bagi pemula seperti saya.
+
+Untuk mengatasi tantangan tersebut, rencana saya ke depannya adalah lebih teliti membaca pesan petunjuk yang muncul di layar komputer. Saya juga akan lebih sering mencoba hal-hal baru dan tidak mudah panik jika muncul tulisan error. Jika menemui jalan buntu, saya akan berani bertanya kepada teman yang lebih paham atau mencari solusinya di internet. Saya sadar, menjadi terbiasa dengan alat-alat ini butuh latihan, dan setiap error adalah bagian dari proses belajar.
