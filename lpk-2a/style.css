@@ -1,0 +1,271 @@
+/* ===== RESET & VARIABEL ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #0e0e0e;
+  --paper: #f3f3f0;
+  --line: #cfcfca;
+  --line-dark: #6b6b6b;
+  --serif: 'Instrument Serif', 'Times New Roman', serif;
+  --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+
+body {
+  font-family: var(--sans);
+  background: var(--black);
+  color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-weight: 400; }
+h1, h2, .card h3 { font-family: var(--serif); }
+
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+
+/* ===== NAVIGASI (Flexbox) ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 28px;
+  background: var(--black);
+  border-bottom: 1px solid #222;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.brand { font-weight: 700; letter-spacing: 0.04em; }
+
+.menu { display: flex; gap: clamp(14px, 3.5vw, 48px); }
+
+.menu a:hover, .menu a.aktif, .nav-kanan:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.nav-kanan { justify-self: end; }
+
+/* ===== HERO ===== */
+header {
+  position: relative;
+  overflow: hidden;
+  min-height: min(88vh, 820px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 44px 28px 32px;
+  background:
+    radial-gradient(60% 55% at 72% 0%, rgba(255, 255, 255, 0.16), transparent 70%),
+    var(--black);
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(3rem, 9.5vw, 8rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+
+.foto {
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 62%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1) contrast(1.1);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 40%);
+  mask-image: linear-gradient(to right, transparent 0, #000 40%);
+}
+
+.hero-foot {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.hero-foot p { max-width: 34ch; font-size: 0.9rem; color: #d4d4d4; }
+
+.hero-foot a {
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-underline-offset: 6px;
+}
+
+/* ===== BAGIAN TERANG DENGAN LENGKUNG ===== */
+.arch, .terang { background: var(--paper); color: var(--black); }
+
+.arch {
+  border-radius: 50% 50% 0 0 / 220px 220px 0 0;
+  padding: 180px 28px 72px;
+}
+
+.terang { padding: 24px 28px 104px; }
+
+.wrap { max-width: 1040px; margin: 0 auto; }
+
+h2 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.judul {
+  margin-bottom: 36px;
+  padding-top: 28px;
+  border-top: 1px solid currentColor;
+}
+
+/* ===== TENTANG ===== */
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+article { background: var(--black); color: #fff; padding: 44px 40px; }
+article h2 { margin-bottom: 22px; }
+article p { margin-bottom: 14px; font-size: 0.95rem; color: #d6d6d6; max-width: 56ch; }
+
+aside h3 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+aside ul { list-style: none; }
+
+aside li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+aside li span { color: #666; }
+aside li strong { font-weight: 600; text-align: right; }
+
+/* ===== KEAHLIAN (Grid) ===== */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+
+.card { padding: 0 20px 8px; border-left: 1px solid var(--line); }
+
+.tile {
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  background: linear-gradient(160deg, #3a3a3a, var(--black));
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 3.6rem;
+  letter-spacing: -0.02em;
+  overflow: hidden;
+}
+
+.tile span { transition: transform 0.3s; }
+.card:hover .tile span { transform: scale(1.12); }
+
+.pill {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 2px 11px;
+  border: 1px solid #b6b6b0;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  color: #444;
+}
+
+.card h3 { font-size: 1.9rem; line-height: 1.1; letter-spacing: -0.01em; }
+.meta { margin: 6px 0 10px; font-size: 0.85rem; color: #666; }
+.card p:not(.meta) { font-size: 0.92rem; color: #333; }
+
+.bar { height: 2px; margin-top: 18px; background: var(--line); }
+.bar::after { content: ""; display: block; height: 100%; width: var(--level); background: var(--black); }
+
+/* ===== KONTAK (garis + berlian) ===== */
+#kontak { padding: 96px 28px 0; }
+#kontak .judul { border-top-color: var(--line-dark); }
+
+.kontak {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.kontak > div { padding: 8px 24px 44px; overflow-wrap: anywhere; }
+.kontak > div + div { border-left: 1px solid var(--line-dark); }
+.kontak > div:first-child { padding-left: 0; }
+.kontak > div:nth-child(2) { text-align: center; }
+.kontak > div:last-child { text-align: right; padding-right: 0; }
+
+.kontak h3 {
+  margin-bottom: 10px;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.kontak p { font-size: 0.92rem; color: #d4d4d4; }
+.kontak a { color: #fff; text-underline-offset: 4px; }
+
+.kontak::before, .kontak::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 12px; height: 20px;
+  background: #fff;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.kontak::before { left: calc(33.333% - 6px); }
+.kontak::after { left: calc(66.666% - 6px); }
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 64px 28px 48px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #b4b4b4;
+}
+
+footer strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
